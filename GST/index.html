@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>GST</title>
+
+</head>
+<body>
+    
+      <!--------------------main part------------------------->
+        <div class="container">
+        <form action="active" class="calculator" name="calc">
+            <!--<input type="number" class="value " name="txt" placeholder="896">-->
+               
+            <input type="text" class="value" readonly name="txt" placeholder="0">
+            <button class="num" onclick="calc.txt.value='CHECK'">CHECK<i class="fa-solid fa-arrow-right-long"></i></button>
+            <button class="num" onclick="calc.txt.value='CORRECT'">CORRECT<i class="fa-solid fa-xmark"></i></button>
+            <button class="num" onclick="calc.txt.value='delete'">DELETE<BR> 00-0</button>
+            <button class="num" onclick="calc.txt.value='CHANGE GST%'">CHANGE<strong style="color: black;font-weight: 800;">GST%</strong> </button>
+           <!---- <button class="num" onclick="calc.txt.value='C'">C</button>-->
+           <span class="num equal" onclick="document.calc.txt.value='C'"><i>C</i></span>
+            <span class="num" onclick="calc.txt.value='+3%'"><i>+3%</i></span>
+            <span class="num" onclick="calc.txt.value='+5%'"><i>+5%</i></span>
+            <span class="num" onclick="calc.txt.value='+12%'"><i>+12%</i></span>
+            <span class="num" onclick="calc.txt.value='+18%'"><i>+18%</i></span>
+            <span class="num" onclick="calc.txt.value='+28%'"><i>+28%</i></span>
+            <span class="num" onclick="calc.txt.value='-3%'"><i>-3%</i></span>
+            <span class="num" onclick="calc.txt.value='-5%'"><i>-5%</i></span>
+            <span class="num" onclick="calc.txt.value='-12%'"><i>-12%</i></span>
+            <span class="num" onclick="calc.txt.value='-18%'"><i>-18%</i></span>
+            <span class="num" onclick="calc.txt.value='-28%'"><i>-28%</i></span>
+            <span class="num" onclick="calc.txt.value='GT'"><i>GT</i></span>
+            <span class="num" onclick="calc.txt.value='X'"><i>X</i></span>
+            <span class="num" onclick="calc.txt.value='M+'"><i>M+</i></span>
+            <span class="num" onclick="calc.txt.value='M-'"><i>M-</i></span>
+            <span class="num" onclick="calc.txt.value='MR'"><i>MR</i></span>
+            <span class="num" onclick="calc.txt.value='7'"><i>7</i></span>
+            <span class="num" onclick="calc.txt.value='8'"><i>8</i></span>
+            <span class="num" onclick="calc.txt.value='9'"><i>9</i></span>
+            <span class="num div" onclick="calc.txt.value='/'"><i>/</i></span>
+            <span class="num" onclick="calc.txt.value='MU'"><i>MU</i></span>
+            <span class="num" onclick="calc.txt.value='4'"><i>4</i></span>
+            <span class="num" onclick="calc.txt.value='5'"><i>5</i></span>
+            <span class="num" onclick="calc.txt.value='6'"><i>6</i></span>
+            <span class="num multi" onclick="calc.txt.value='*'"><i>*</i></span>
+            <span class="num module" onclick="calc.txt.value='%'"><i>%</i></span>
+            <span class="num" onclick="calc.txt.value='1'"><i>1</i></span>
+            <span class="num" onclick="calc.txt.value='2'"><i>2</i></span>
+            <span class="num" onclick="calc.txt.value='3'"><i>3</i></span>
+            <span class="num plus" onclick="calc.txt.value='+'"><i>+</i></span>
+            <span class="num min" onclick="calc.txt.value='-'"><i>-</i></span>
+            <span class="num" onclick="calc.txt.value='0'"><i>0</i></span>
+            <span class="num" onclick="calc.txt.value='00'"><i>00</i></span>
+            <span class="num" onclick="calc.txt.value='.'"><i>.</i></span>
+            <!--<span class="num" onclick="calc.txt.value=''"><i>=</i></span>-->
+            <span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i>=</i></span>
+        </form>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

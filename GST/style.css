@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.container{
+    display: flex;
+    min-width: 300px;
+    min-height: 300px;
+    position: relative;
+    background: #000;
+}
+.calculator{
+    position: relative;
+    display: grid;
+}
+.calculator .value{
+    position: relative;
+    grid-column: span 5;
+    height: 100px;
+    width:100% ;
+    border: none;
+    outline: none;
+    background: #a7af7c;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+button{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 60px;
+    margin-right: 2px;
+    margin-top: 1px;
+    border-radius: 5px;
+    background: rgb(69, 69, 218);
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+
+.calculator span{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 60px;
+    margin-right: 2px;
+    margin-top: 1px;
+    border-radius: 5px;
+    background: linear-gradient(180deg,#2f2f2f,#3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0,0,0,0.15),
+    inset -8px 0 8px rgba(0,0,0,0.25),
+    0 0 0 2px rgba(0 0 0 0.75),
+    10px 20px 25px rgba(0,0,0,0.4);
+    color: #ffff;
+    user-select: none;
+    cursor: pointer;
+    font-weight: 400;
+
+}
+
+.calculator span::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    bottom: 3px;
+    right: 8px;
+    background:linear-gradient(90deg,#0f0f0f,#3d3c3c) ;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(0 0 0 0.1),
+    10px 5px 10px rgba(0 0 0 0.15);
+    border-left: 1px solid#0004;
+    border-left: 1px solid#0004;
+    border-bottom: 1px solid#0004;
+    border-top: 1px solid#0004;
+}
+.calculator span:active{
+    filter: brightness(1.5);
+}
+.calculator span i{
+       position: relative;
+       font-style: normal;
+       font-size: 1.5em;
+}
+/* ****+oprator************ */
+.calculator .plus {
+    grid-row: span 2;
+    height: 120px;
+    background-color: #0e0f04;
+    background: linear-gradient(180deg,#080800,#000000);
+    box-shadow: inset -8px 0 8px rgba(48, 47, 3, 0.15),
+    inset -8px 0 8px rgba(11, 12, 0, 0.25),
+    0 0 0 2px rgba(5, 4, 0, 0.75),
+    10px 20px 25px rgba(7, 7, 0, 0.4);
+}
+.calculator .plus::before{
+    background:linear-gradient(90deg,#181300,#0e0c00) ;
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px rgba(12, 11, 2, 0.1),
+    10px 5px 10px rgba(65, 64, 11, 0.15);
+    border-left: 1px solid rgba(54, 46, 7, 0.267);
+    border-left: 1px solid rgba(0, 0, 0, 0.267);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    border-top: 1px solid rgba(14, 14, 1, 0.267);
+}
+/* multi */
+.calculator .multi{
+    /* grid-row: span 2; */
+    /* height: 120px; */
+    background-color: #4b4e37;
+    background: linear-gradient(180deg,#080800,#000000);
+    box-shadow: inset -8px 0 8px rgba(48, 47, 3, 0.15),
+    inset -8px 0 8px rgba(67, 71, 5, 0.25),
+    0 0 0 2px rgba(32, 27, 3, 0.75),
+    10px 20px 25px rgba(10, 10, 0, 0.4);
+}
+.calculator .multi::before{
+    background:linear-gradient(90deg,#181300,#0e0c00) ;
+    /* border-radius: 10px; */
+    box-shadow: -5px -5px 15px rgba(12, 11, 2, 0.1),
+    10px 5px 10px rgba(65, 64, 11, 0.15);
+    border-left: 1px solid rgba(12, 10, 0, 0.267);
+    border-left: 1px solid rgba(0, 0, 0, 0.267);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    border-top: 1px solid rgba(17, 17, 2, 0.267);
+}
+/* minus */
+.calculator .min{
+    /* grid-row: span 2; */
+    /* height: 120px; */
+    background-color: #131601;
+    background: linear-gradient(180deg,#080800,#000000);
+    box-shadow: inset -8px 0 8px rgba(48, 47, 3, 0.15),
+    inset -8px 0 8px rgba(67, 71, 5, 0.25),
+    0 0 0 2px rgba(10, 9, 0, 0.75),
+    10px 20px 25px rgba(3, 3, 0, 0.4);
+}
+.calculator .min::before{
+    background:linear-gradient(90deg,#181300,#0e0c00) ;
+    /* border-radius: 10px; */
+    box-shadow: -5px -5px 15px rgba(12, 11, 2, 0.1),
+    10px 5px 10px rgba(20, 20, 2, 0.15);
+    border-left: 1px solid rgba(54, 46, 7, 0.267);
+    border-left: 1px solid rgba(0, 0, 0, 0.267);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    border-top: 1px solid rgba(17, 17, 2, 0.267);
+}
+/* module */
+.calculator .module{
+    /* grid-row: span 2; */
+    /* height: 120px; */
+    background-color: #040500;
+    background: linear-gradient(180deg,#080800,#0e0c00);
+    box-shadow: inset -8px 0 8px rgba(48, 47, 3, 0.15),
+    inset -8px 0 8px rgba(8, 8, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(7, 7, 0, 0.4);
+}
+.calculator .module::before{
+    background:linear-gradient(90deg,#181300,#0e0c00) ;
+    /* border-radius: 10px; */
+    box-shadow: -5px -5px 15px rgba(12, 11, 2, 0.1),
+    10px 5px 10px rgba(8, 8, 0, 0.15);
+    border-left: 1px solid rgba(17, 14, 1, 0.267);
+    border-left: 1px solid rgba(0, 0, 0, 0.267);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    border-top: 1px solid rgba(17, 17, 2, 0.267);
+}
+/* div */
+.calculator .div{
+    /* grid-row: span 2; */
+    /* height: 120px; */
+    background-color: #4b4e37;
+    background: linear-gradient(180deg,#080800,#0e0c00);
+    box-shadow: inset -8px 0 8px rgba(48, 47, 3, 0.15),
+    inset -8px 0 8px rgba(29, 31, 1, 0.25),
+    0 0 0 2px rgba(27, 23, 1, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+}
+.calculator .div::before{
+    background:linear-gradient(90deg,#0a0801,#0e0c00) ;
+    /* border-radius: 10px; */
+    box-shadow: -5px -5px 15px rgba(12, 11, 2, 0.1),
+    10px 5px 10px rgba(46, 45, 1, 0.15);
+    border-left: 1px solid rgba(54, 46, 7, 0.267);
+    border-left: 1px solid rgba(0, 0, 0, 0.267);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    border-top: 1px solid rgba(17, 17, 2, 0.267);
+}
+.calculator .equal{
+    background: #f00;
+}
+.calculator .equal::before{
+    background: linear-gradient(90deg,#e62323,#a50d0dcc);
+    border-left: 1px solid rgba(175, 6, 6, 0.534);
+    border-bottom: 1px solid rgba(148, 14, 14, 0.534);;
+    border-top: 1px solid rgba(175, 6, 6, 0.534);;
+    
+}
